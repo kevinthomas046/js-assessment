@@ -7,7 +7,16 @@ define([ 'jquery' ], function($) {
     },
 
     manipulateRemoteData : function(url) {
+        var dfd = $.Deferred(),
+            peopleData;
+        $.ajax({
+            url: url,
+            success: function(data) {
+                peopleData = data.people.map(function(value) {return value.name;});
+            }
+        });
 
+        return dfd.promise();
     }
   };
 });
