@@ -1,11 +1,13 @@
 # A test-driven JS assessment
 
+[![Join the chat at https://gitter.im/rmurphey/js-assessment](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rmurphey/js-assessment?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This repo includes a set of tests that can be used to assess the skills of
 a candidate for a JavaScript position, or to improve one's own skills.
 
 ## I want to work on the tests; what do I do?
 To use the tests, you will need to install Node -- you can do this via the
-[download page](http://nodejs.org/#download) or using
+[download page](https://nodejs.org/download/) or using
 [Homebrew](http://mxcl.github.com/homebrew/) if you are on a Mac.
 
 Note that on Windows, there are some reports that you will need to restart
@@ -15,7 +17,7 @@ You can clone or download this repo. Once you have done so, from the root
 directory of the repo, run:
 
     npm install
-    node bin/serve
+    npm start
 
 You can then view the tests in your browser at
 [http://localhost:4444](http://localhost:4444).
@@ -63,8 +65,8 @@ the `data` directory; you can access it at `/data/<filename>.json`.
 
 ### Available dependencies
 
-The repo includes jQuery, Backbone, Underscore, and RequireJS. If there's other
-stuff you'd find useful, you can put it in the `lib` directory.
+The repo includes jQuery, Backbone, and Underscore. Do take advantage of these
+libraries when writing your solutions!
 
 ## I want to see the answers!
 
@@ -78,10 +80,9 @@ keep them up to date.
 
 ## I hate \<some technology you've chosen\>
 
-This repo uses [RequireJS](http://requirejs.org) for dependency management and
-[Mocha](http://visionmedia.github.com/mocha/) and [expect.js](https://github.com/LearnBoost/expect.js/blob/master/README.md)
-for the tests themselves. It uses the BDD style for authoring tests. If this
-doesn't suit you, please fork away, or, better, submit a pull request that lets
+This repo uses [Mocha](http://visionmedia.github.com/mocha/) and
+[Chai](http://chaijs.com/) for the tests themselves. It uses the BDD style for authoring tests.
+If this doesn't suit you, please fork away, or, better, submit a pull request that lets
 this be more flexible than it currently is.
 
 # Todos
@@ -92,18 +93,8 @@ requests welcome!
 
 # License
 
-Copyright &copy; 2012 Rebecca Murphey.
+Copyright &copy; 2012-2015 Rebecca Murphey.
 
-This work is licensed under the [Creative Commons Attribution-Share Alike 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
-license. You are free to share and remix the work, and to use it for commercial
-purposes under the following conditions:
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
-- *Attribution* — You must attribute the work in the manner specified by the
-  author or licensor (but not in any way that suggests that they endorse you or
-  your use of the work).
-- *Share Alike* — If you alter, transform, or build upon this work, you may
-  distribute the resulting work only under the same or similar license to this
-  one.
-
-Any of these conditions can be waived if you get permission from the copyright
-holder.
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

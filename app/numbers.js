@@ -1,25 +1,19 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = (typeof window === 'undefined') ? global : window;
 
-define(function() {
-  return {
-    valueAtBit: function(num, bit) {
-        var bitArray = parseInt(num, 10).toString(2).split('');
-        return parseInt(bitArray[bitArray.length - bit], 10);
-    },
+exports.numbersAnswers = {
+  valueAtBit: function(num, bit) {
 
-    base10: function(str) {
-        return parseInt(parseInt(str, 2).toString(10), 10);
-    },
+  },
 
-    convertToBinary: function(num) {
-        var binaryString = parseInt(num, 10).toString(2);
-        return binaryString.length !== 8 ? '0' + binaryString : binaryString;
-    },
+  base10: function(str) {
 
-    multiply: function(a, b) {
-        var decimalPrecision = ((+b).toFixed(20)).replace(/^-?\d*\.?|0+$/g, '').length;
-        a.toFixed(decimalPrecision);
-    }
-  };
-});
+  },
 
+  convertToBinary: function(num) {
+
+  },
+
+  multiply: function(a, b) {
+
+  }
+};

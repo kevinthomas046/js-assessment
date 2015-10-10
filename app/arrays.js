@@ -1,10 +1,10 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = (typeof window === 'undefined') ? global : window;
 
-define(function() {
-  return {
-    indexOf : function(arr, item) {
+exports.arraysAnswers = {
+
+  indexOf : function(arr, item) {
         return arr.indexOf(item);
-    },
+  },
 
     sum : function(arr) {
         return arr.reduce(function(previousValue, currentValue) {

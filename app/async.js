@@ -1,22 +1,11 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = (typeof window === 'undefined') ? global : window;
 
-define([ 'jquery' ], function($) {
-  return {
-    async : function(value) {
+exports.asyncAnswers = {
+  async : function(value) {
 
-    },
+  },
 
-    manipulateRemoteData : function(url) {
-        var dfd = $.Deferred(),
-            peopleData;
-        $.ajax({
-            url: url,
-            success: function(data) {
-                peopleData = data.people.map(function(value) {return value.name;});
-            }
-        });
+  manipulateRemoteData : function(url) {
 
-        return dfd.promise();
-    }
-  };
-});
+  }
+};

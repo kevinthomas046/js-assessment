@@ -1,33 +1,35 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = (typeof window === 'undefined') ? global : window;
 
 /**
  * This file defines an object with some methods. Some of these methods are
  * populated incorrectly; your job is to fix them. Other methods are not
  * populated at all; your job is to fill them out.
  */
-define(function() {
-  return {
-    globals : function() {
-    },
 
-    functions : function(flag) {
-      if (flag) {
-        var getValue = function() { return 'a'; }
-      } else {
-        var getValue = function() { return 'b'; }
-      }
+exports.bestPracticesAnswers = {
+  globals : function() {
+    myObject = {
+      name : 'Jory'
+    };
 
-      return getValue();
-    },
+    return myObject;
+  },
 
-    parseInt : function(num) {
-      if (num.indexOf('0x') !== -1)
-        return 0;
-      return parseInt(num);
-    },
-
-    identity : function(val1, val2) {
-      return val1 === val2;
+  functions : function(flag) {
+    if (flag) {
+      function getValue() { return 'a'; }
+    } else {
+      function getValue() { return 'b'; }
     }
-  };
-});
+
+    return getValue();
+  },
+
+  parseInt : function(num) {
+    return parseInt(num);
+  },
+
+  identity : function(val1, val2) {
+
+  }
+};

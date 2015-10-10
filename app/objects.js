@@ -1,24 +1,15 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = (typeof window === 'undefined') ? global : window;
 
-define(function() {
-  return {
-    alterContext : function(fn, obj) {
-		return fn.call(obj);
-	},
+exports.objectsAnswers =  {
+  alterContext : function(fn, obj) {
 
-    alterObjects : function(constructor, greeting) {
-		constructor.prototype.greeting = greeting;
-    },
+  },
 
-    iterate : function(obj) {
-		var propertyArray = [];
+  alterObjects : function(constructor, greeting) {
 
-		for (var key in obj) {
-			if (obj.hasOwnProperty(key)) {
-				propertyArray.push(key + ': ' + obj[key]);
-			}
-		}
-		return propertyArray;
-    }
-  };
-});
+  },
+
+  iterate : function(obj) {
+
+  }
+};

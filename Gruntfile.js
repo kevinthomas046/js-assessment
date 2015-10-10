@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
     jshint: {
       all: [
@@ -14,23 +16,29 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: 'app/**/*.js',
+        files: ['app/**/*.js', 'tests/app/**/*.js'],
         tasks: ['jshint'],
         options: {
           livereload: true
         }
       }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 4444,
+        base: {
+          path: __dirname,
+          options: {
+            index: 'tests/runner.html',
+            keepalive: true
+          }
+        }
+      }
     }
+  }
   });
-
-  grunt.registerTask('server', 'Start a custom web server.', function() {
-    var server = require('./server/server.js');
-    server({ port : 4444, dev : true });
-  });
-
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', [ 'jshint' ]);
-  grunt.registerTask('develop', [ 'server', 'watch' ]);
+  grunt.registerTask('develop', [ 'connect', 'watch' ]);
 };
